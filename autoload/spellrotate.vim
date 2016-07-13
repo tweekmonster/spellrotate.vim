@@ -122,6 +122,8 @@ function! spellrotate#cycle(dir, visual) abort
         \ getpos(a:visual ? "'>" : "']")[1:2],
         \ ]
 
+  redraw
+
   echon printf('Suggestion %*s of %s for "', strlen(b:_spell.n_alts - 1), b:_spell.index, b:_spell.n_alts - 1)
   echohl Title
   echon b:_spell.cword
@@ -152,7 +154,6 @@ function! spellrotate#cycle(dir, visual) abort
   echon next_word
   echohl None
 
-  redraw
 endfunction
 
 
