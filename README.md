@@ -37,7 +37,7 @@ vmap <silent> zp <Plug>(SpellRotateBackwardV)
 **Note**: You must use `nmap` and `vmap`.
 
 **Note**: The above keys are only examples!  I'm sure you already hate them.
-Spelling, folding, and a handful of miscellanious motions are prefixed by `z`.
+Spelling, folding, and a handful of miscellaneous motions are prefixed by `z`.
 Nobody would be happy with a default key map set by this plugin.
 
 ## License
