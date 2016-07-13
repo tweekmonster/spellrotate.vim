@@ -18,7 +18,7 @@ function! spellrotate#cycle(dir, visual) abort
   let view = winsaveview()
   let on_spell_word = 0
 
-  if exists('b:_spell')
+  if exists('b:_spell') && getline("'[") == getline("']")
     let bounds = b:_spell.bounds
     " Confirm that the cursor is between the bounds being tracked.
     let on_spell_word = bounds[0][0] == bounds[1][0]
