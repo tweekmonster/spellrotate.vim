@@ -122,11 +122,11 @@ function! spellrotate#cycle(dir, visual) abort
         \ getpos(a:visual ? "'>" : "']")[1:2],
         \ ]
 
-  echo 'Spell Rotate ('
+  echon printf('Suggestion %*s of %s for "', strlen(b:_spell.n_alts - 1), b:_spell.index, b:_spell.n_alts - 1)
   echohl Title
   echon b:_spell.cword
   echohl None
-  echon '): '
+  echon '":  '
 
   if a:dir < 0
     echohl String
