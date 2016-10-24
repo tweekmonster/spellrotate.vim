@@ -1,4 +1,4 @@
-function! spellrotate#cycle(dir, visual) abort
+function! s:cycle(dir, visual) abort
   if a:visual
     " Restore selection.  This line is seen throughout the function if the
     " selection is cleared right before a potential return.
@@ -154,6 +154,14 @@ function! spellrotate#cycle(dir, visual) abort
   echon next_word
   echohl None
 
+endfunction
+
+
+function! spellrotate#cycle(dir, visual) abort
+  let fo = &l:formatoptions
+  setlocal formatoptions-=a
+  call s:cycle(a:dir, a:visual)
+  let &l:formatoptions = fo
 endfunction
 
 
